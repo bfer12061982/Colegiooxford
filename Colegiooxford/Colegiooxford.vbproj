@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84200845-C783-47B7-B613-5AE4041F885D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Colegiooxford.My.MyApplication</StartupObject>
+    <RootNamespace>Colegiooxford</RootNamespace>
+    <AssemblyName>Colegiooxford</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Colegiooxford.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Colegiooxford.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cyotek.CircularBuffer.1.2.1\lib\net472\Cyotek.Collections.Generic.CircularBuffer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Acarrera.Designer.vb">
+      <DependentUpon>Acarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Acarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Adistribuicionnotas.Designer.vb">
+      <DependentUpon>Adistribuicionnotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Adistribuicionnotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Agradosasignados.Designer.vb">
+      <DependentUpon>Agradosasignados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\Agradosasignados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\AMineduc.Designer.vb">
+      <DependentUpon>AMineduc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Carreras\AMineduc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSDistribucionnotas.Designer.vb">
+      <DependentUpon>GSDistribucionnotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSDistribucionnotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSGeneral.Designer.vb">
+      <DependentUpon>GSGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSMineduc.Designer.vb">
+      <DependentUpon>GSMineduc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSMineduc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSSecciones.Designer.vb">
+      <DependentUpon>GSSecciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Gradossecciones\GSSecciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Maestro\MGeneral.Designer.vb">
+      <DependentUpon>MGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Maestro\MGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Maestro\Mmateriasasignadas.Designer.vb">
+      <DependentUpon>Mmateriasasignadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Academicos\Maestro\Mmateriasasignadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CGeneral.Designer.vb">
+      <DependentUpon>CGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CAcademicos.Designer.vb">
+      <DependentUpon>CAcademicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CAcademicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CCalculomora.Designer.vb">
+      <DependentUpon>CCalculomora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CCalculomora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CContratos.Designer.vb">
+      <DependentUpon>CContratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashb.Designer.vb">
+      <DependentUpon>Dashb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CFinanciero.Designer.vb">
+      <DependentUpon>CFinanciero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Colegios\CFinanciero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacionmant.Designer.vb">
+      <DependentUpon>Informacionmant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Informacionmant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.vb">
+      <DependentUpon>Mantenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGGeneral.Designer.vb">
+      <DependentUpon>PGGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGTiposcargo.Designer.vb">
+      <DependentUpon>PGTiposcargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGTiposcargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCClasificaciontipocargo.Designer.vb">
+      <DependentUpon>CCClasificaciontipocargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCClasificaciontipocargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCCuotas.Designer.vb">
+      <DependentUpon>CCCuotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCCuotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCOtrasformasdepago.Designer.vb">
+      <DependentUpon>CCOtrasformasdepago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCOtrasformasdepago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCTipodebeca.Designer.vb">
+      <DependentUpon>CCTipodebeca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCTipodebeca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCTiponotacredito.Designer.vb">
+      <DependentUpon>CCTiponotacredito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\CCTiponotacredito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Cargo\CCTCGeneral.Designer.vb">
+      <DependentUpon>CCTCGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Cargo\CCTCGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDGeneral.Designer.vb">
+      <DependentUpon>CCTDGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDeface.Designer.vb">
+      <DependentUpon>CCTDeface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDeface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Empresas\PEEstablecimientos.Designer.vb">
+      <DependentUpon>PEEstablecimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Empresas\PEEstablecimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Empresas\PEGeneral.Designer.vb">
+      <DependentUpon>PEGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Empresas\PEGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAFinanciero.Designer.vb">
+      <DependentUpon>PAFinanciero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAFinanciero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAGeneral.Designer.vb">
+      <DependentUpon>PAGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAGradosseccion.Designer.vb">
+      <DependentUpon>PAGradosseccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAGradosseccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAObservaciones.Designer.vb">
+      <DependentUpon>PAObservaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAObservaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAOtros.Designer.vb">
+      <DependentUpon>PAOtros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAOtros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAPapeleriaexpediente.Designer.vb">
+      <DependentUpon>PAPapeleriaexpediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PAPapeleriaexpediente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PARetiro.Designer.vb">
+      <DependentUpon>PARetiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Alumnos\PARetiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFAdicionales.Designer.vb">
+      <DependentUpon>PFAdicionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFAdicionales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFConveniopago.Designer.vb">
+      <DependentUpon>PFConveniopago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFConveniopago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFInternet.Designer.vb">
+      <DependentUpon>PFInternet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFInternet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFObservaciones.Designer.vb">
+      <DependentUpon>PFObservaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFObservaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPAdicionales.Designer.vb">
+      <DependentUpon>PPAdicionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPAdicionales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodo.vb" />
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFGeneral.Designer.vb">
+      <DependentUpon>PFGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Familias\PFGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPPersona.Designer.vb">
+      <DependentUpon>PPPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPTrabajo.Designer.vb">
+      <DependentUpon>PPTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MANTENIMIENTO\Principales\Personas\PPTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Mensaje1.Designer.vb">
+      <DependentUpon>Mensaje1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Carreras\Acarrera.resx">
+      <DependentUpon>Acarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Carreras\Adistribuicionnotas.resx">
+      <DependentUpon>Adistribuicionnotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Carreras\Agradosasignados.resx">
+      <DependentUpon>Agradosasignados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Carreras\AMineduc.resx">
+      <DependentUpon>AMineduc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Gradossecciones\GSDistribucionnotas.resx">
+      <DependentUpon>GSDistribucionnotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Gradossecciones\GSGeneral.resx">
+      <DependentUpon>GSGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Gradossecciones\GSMineduc.resx">
+      <DependentUpon>GSMineduc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Gradossecciones\GSSecciones.resx">
+      <DependentUpon>GSSecciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Maestro\MGeneral.resx">
+      <DependentUpon>MGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Academicos\Maestro\Mmateriasasignadas.resx">
+      <DependentUpon>Mmateriasasignadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Colegios\CGeneral.resx">
+      <DependentUpon>CGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Colegios\CAcademicos.resx">
+      <DependentUpon>CAcademicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Colegios\CCalculomora.resx">
+      <DependentUpon>CCalculomora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Colegios\CContratos.resx">
+      <DependentUpon>CContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashb.resx">
+      <DependentUpon>Dashb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Colegios\CFinanciero.resx">
+      <DependentUpon>CFinanciero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacionmant.resx">
+      <DependentUpon>Informacionmant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGGeneral.resx">
+      <DependentUpon>PGGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Administrativo\Parametros Generales\PGTiposcargo.resx">
+      <DependentUpon>PGTiposcargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\CCClasificaciontipocargo.resx">
+      <DependentUpon>CCClasificaciontipocargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\CCCuotas.resx">
+      <DependentUpon>CCCuotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\CCOtrasformasdepago.resx">
+      <DependentUpon>CCOtrasformasdepago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\CCTipodebeca.resx">
+      <DependentUpon>CCTipodebeca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\CCTiponotacredito.resx">
+      <DependentUpon>CCTiponotacredito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\Tipos de Cargo\CCTCGeneral.resx">
+      <DependentUpon>CCTCGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDeface.resx">
+      <DependentUpon>CCTDeface.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Cuentacorriente\Tipos de Documentos\CCTDGeneral.resx">
+      <DependentUpon>CCTDGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAFinanciero.resx">
+      <DependentUpon>PAFinanciero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAGeneral.resx">
+      <DependentUpon>PAGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAGradosseccion.resx">
+      <DependentUpon>PAGradosseccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAObservaciones.resx">
+      <DependentUpon>PAObservaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAOtros.resx">
+      <DependentUpon>PAOtros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PAPapeleriaexpediente.resx">
+      <DependentUpon>PAPapeleriaexpediente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Alumnos\PARetiro.resx">
+      <DependentUpon>PARetiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Empresas\PEEstablecimientos.resx">
+      <DependentUpon>PEEstablecimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Empresas\PEGeneral.resx">
+      <DependentUpon>PEGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Familias\PFAdicionales.resx">
+      <DependentUpon>PFAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Familias\PFConveniopago.resx">
+      <DependentUpon>PFConveniopago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Familias\PFInternet.resx">
+      <DependentUpon>PFInternet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Familias\PFObservaciones.resx">
+      <DependentUpon>PFObservaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Personas\PPAdicionales.resx">
+      <DependentUpon>PPAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Familias\PFGeneral.resx">
+      <DependentUpon>PFGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Personas\PPPersona.resx">
+      <DependentUpon>PPPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANTENIMIENTO\Principales\Personas\PPTrabajo.resx">
+      <DependentUpon>PPTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensaje1.resx">
+      <DependentUpon>Mensaje1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\logosistema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\logosistema1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alumnos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrativo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuentacorriente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\academicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564399-close_81512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siimagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuentacorriente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuentacorriente11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\academico.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
